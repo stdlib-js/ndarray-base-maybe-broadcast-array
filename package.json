@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-base-maybe-broadcast-array",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Broadcast an ndarray to a specified shape if and only if the specified shape differs from the provided ndarray's shape.",
   "license": "Apache-2.0",
   "author": {

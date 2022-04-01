@@ -1,0 +1,36 @@
+{
+  "name": "@stdlib/ndarray-base-maybe-broadcast-array",
+  "version": "0.0.0",
+  "description": "Broadcast an ndarray to a specified shape if and only if the specified shape differs from the provided ndarray's shape.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/ndarray-base-maybe-broadcast-array.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdtypes",
+    "types",
+    "base",
+    "ndarray",
+    "broadcast",
+    "broadcasting",
+    "reshape",
+    "multidimensional",
+    "array",
+    "utilities",
+    "utility",
+    "utils",
+    "util"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}

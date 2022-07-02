@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2022 The Stdlib Authors.
@@ -16,32 +16,32 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var broadcast = require( '@stdlib/ndarray-base-broadcast-array' );
-
-
-// MAIN //
+import { ArrayLike } from '@stdlib/types/array';
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Broadcasts an ndarray to a specified shape if and only if the specified shape differs from the provided ndarray's shape.
 *
 * ## Notes
 *
+* -   The function throws an error if a provided ndarray is incompatible with a provided shape.
 * -   If a provided ndarray has the same shape as the specified shape, the function returns the provided ndarray.
 * -   If a provided ndarray has a different (broadcast compatible) shape than the specified shape, the function returns a new (base) ndarray view of the provided ndarray's data. The view is typically **not** contiguous. As more than one element of a returned view may refer to the same memory location, writing to the view may affect multiple elements. If you need to write to the returned array, copy the array before performing operations which may mutate elements.
+* -   A returned array view is a "base" ndarray, and, thus, a returned array view does not perform bounds checking or afford any of the guarantees of the non-base ndarray constructor. The primary intent of this function is to broadcast an ndarray-like object within internal implementations and to do so with minimal overhead.
 *
-* @param {ndarray} arr - input array
-* @param {NonNegativeIntegerArray} shape - desired shape
-* @throws {Error} input array cannot have more dimensions than the desired shape
-* @throws {Error} input array dimension sizes must be `1` or equal to the corresponding dimension in the provided shape
-* @throws {Error} input array and desired shape must be broadcast compatible
-* @returns {ndarray} broadcasted array
+* @param arr - input array
+* @param shape - desired shape
+* @throws input array cannot have more dimensions than the desired shape
+* @throws input array dimension sizes must be `1` or equal to the corresponding dimension in the provided shape
+* @throws input array and desired shape must be broadcast compatible
+* @returns broadcasted array
 *
 * @example
-* var array = require( '@stdlib/ndarray-array' );
+* var array = require( `@stdlib/ndarray/array` );
 *
 * var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
 * // returns <ndarray>
@@ -72,40 +72,10 @@ var broadcast = require( '@stdlib/ndarray-base-broadcast-array' );
 *
 * v = y.get( 2, 1, 1 );
 * // returns 4
-*
-* @example
-* var array = require( '@stdlib/ndarray-array' );
-*
-* var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-* // returns <ndarray>
-*
-* var y = maybeBroadcastArray( x, [ 3, 2 ] );
-* // throws <Error>
 */
-function maybeBroadcastArray( arr, shape ) {
-	var sh;
-	var N;
-	var i;
-
-	N = shape.length;
-	sh = arr.shape;
-
-	// Check whether we need to broadcast the input array...
-	if ( sh.length === N ) {
-		for ( i = 0; i < N; i++ ) {
-			// Check whether dimensions match...
-			if ( sh[ i ] !== shape[ i ] ) {
-				// We found a mismatched dimension; delegate to `broadcast` to ensure that the input array is broadcast compatible with the desired array shape...
-				return broadcast( arr, shape );
-			}
-		}
-		return arr;
-	}
-	// If we are provided an array having a different rank (i.e., number of dimensions) than the desired shape, assume we need to broadcast, delegating to `broadcast` to ensure that the input array is broadcast compatible with the desired array shape...
-	return broadcast( arr, shape );
-}
+declare function maybeBroadcastArray( arr: ndarray, shape: ArrayLike<number> ): ndarray; // tslint:disable-line:max-line-length
 
 
 // EXPORTS //
 
-module.exports = maybeBroadcastArray;
+export = maybeBroadcastArray;

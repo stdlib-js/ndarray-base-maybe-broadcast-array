@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@stdlib/ndarray-base-broadcast-array": "^0.1.0",
+    "@stdlib/ndarray-base-shape": "github:stdlib-js/ndarray-base-shape#main",
     "@stdlib/types": "^0.1.0"
   },
   "devDependencies": {

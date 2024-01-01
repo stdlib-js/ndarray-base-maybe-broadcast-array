@@ -45,30 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-maybe-broadcast-array
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var maybeBroadcastArray = require( '@stdlib/ndarray-base-maybe-broadcast-array' );
+import maybeBroadcastArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@esm/index.mjs';
 ```
 
 #### maybeBroadcastArray( arr, shape )
@@ -76,7 +60,7 @@ var maybeBroadcastArray = require( '@stdlib/ndarray-base-maybe-broadcast-array' 
 Broadcasts an [ndarray][@stdlib/ndarray/base/ctor] to a specified `shape` if and only if the specified `shape` differs from the provided [ndarray][@stdlib/ndarray/base/ctor]'s shape.
 
 ```javascript
-var array = require( '@stdlib/ndarray-array' );
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
 
 // Create a 2x2 ndarray:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -114,11 +98,16 @@ var y = maybeBroadcastArray( x, [ 2, 2, 2 ] );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var array = require( '@stdlib/ndarray-array' );
-var numel = require( '@stdlib/ndarray-base-numel' );
-var ind2sub = require( '@stdlib/ndarray-ind2sub' );
-var maybeBroadcastArray = require( '@stdlib/ndarray-base-maybe-broadcast-array' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@esm/index.mjs';
+import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@esm/index.mjs';
+import ind2sub from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@esm/index.mjs';
+import maybeBroadcastArray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@esm/index.mjs';
 
 // Create a 2x2 array:
 var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
@@ -140,6 +129,10 @@ var i;
 for ( i = 0; i < N; i++ ) {
     console.log( 'Y[%s] = %d', ind2sub( sh, i ).join( ', ' ), y.iget( i ) );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -171,7 +164,7 @@ for ( i = 0; i < N; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -231,11 +224,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-maybe-broadcast-array/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor/tree/esm
 
-[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes
+[@stdlib/ndarray/base/broadcast-shapes]: https://github.com/stdlib-js/ndarray-base-broadcast-shapes/tree/esm
 
 </section>
 

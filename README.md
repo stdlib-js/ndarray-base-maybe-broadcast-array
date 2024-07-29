@@ -54,7 +54,7 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
-maybeBroadcastArray = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@umd/browser.js' )
+maybeBroadcastArray = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@v0.2.2-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -66,7 +66,7 @@ var maybeBroadcastArray = require( 'path/to/vendor/umd/ndarray-base-maybe-broadc
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@v0.2.2-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -129,7 +129,7 @@ var y = maybeBroadcastArray( x, [ 2, 2, 2 ] );
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-array@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-ind2sub@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-maybe-broadcast-array@v0.2.2-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 

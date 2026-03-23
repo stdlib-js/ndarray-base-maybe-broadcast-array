@@ -37,14 +37,14 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/ndarray-base-broadcast-array": "^0.2.3",
+    "@stdlib/ndarray-base-broadcast-array": "^0.2.4",
     "@stdlib/ndarray-base-shape": "^0.2.3",
     "@stdlib/types": "^0.4.3"
   },
   "devDependencies": {
     "@stdlib/array-float64": "^0.2.3",
-    "@stdlib/assert-is-ndarray-like": "^0.2.2",
-    "@stdlib/ndarray-array": "^0.2.2",
+    "@stdlib/assert-is-ndarray-like": "^0.2.3",
+    "@stdlib/ndarray-array": "^0.2.3",
     "@stdlib/ndarray-base-ctor": "^0.3.1",
     "@stdlib/ndarray-base-numel": "^0.2.3",
     "@stdlib/ndarray-ctor": "^0.3.1",

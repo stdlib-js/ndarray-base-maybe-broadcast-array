@@ -1,5 +1,35 @@
-"use strict";var o=function(e,r){return function(){return r||e((r={exports:{}}).exports,r),r.exports}};var s=o(function(l,n){
-var u=require('@stdlib/ndarray-base-broadcast-array/dist'),v=require('@stdlib/ndarray-base-shape/dist');function c(e,r){var i,a,t;if(a=r.length,i=v(e,!1),i.length===a){for(t=0;t<a;t++)if(i[t]!==r[t])return u(e,r);return e}return u(e,r)}n.exports=c
-});var f=s();module.exports=f;
 /** @license Apache-2.0 */
-//# sourceMappingURL=index.js.map
+
+'use strict';
+
+/**
+* Broadcast an ndarray to a specified shape if and only if the specified shape differs from the provided ndarray's shape.
+*
+* @module @stdlib/ndarray-base-maybe-broadcast-array
+*
+* @example
+* var getShape = require( '@stdlib/ndarray-shape' );
+* var array = require( '@stdlib/ndarray-array' );
+* var maybeBroadcastArray = require( '@stdlib/ndarray-base-maybe-broadcast-array' );
+*
+* var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
+* // returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
+*
+* var shx = getShape( x );
+* // returns [ 2, 2 ]
+*
+* var y = maybeBroadcastArray( x, [ 3, 2, 2 ] );
+* // returns <ndarray>[ [ [ 1, 2 ], [ 3, 4 ] ], [ [ 1, 2 ], [ 3, 4 ] ], [ [ 1, 2 ], [ 3, 4 ] ] ]
+*
+* var shy = getShape( y );
+* // returns [ 3, 2, 2 ]
+*/
+
+// MODULES //
+
+var main = require( './main.js' );
+
+
+// EXPORTS //
+
+module.exports = main;
